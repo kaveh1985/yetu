@@ -1,0 +1,4 @@
+.icons {
+    display: flex; /* Required for justify-content to work */
+    justify-content: space-between;
+}
