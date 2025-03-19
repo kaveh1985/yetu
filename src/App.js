@@ -1,5 +1,6 @@
 import styles from "./App.module.css";
 import Header from "./components/header/Header";
+import Options from "./components/options/Options"
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className={styles.body}>
       <div>
         <Header />
+        <Options />
       </div>
     </div>
   );
