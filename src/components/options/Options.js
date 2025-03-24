@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Style from "./Options.module.css";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -7,6 +8,11 @@ import Pasta from '../menu/Pasta';
 
 
 export default function Options() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
     <div className={Style.options}>
@@ -14,10 +20,16 @@ export default function Options() {
         <li><Link to="/burger">Burger</Link></li>
         <li><Link to="/sandwich">Sandwich</Link></li>
         <li><Link to="/pasta">Pasta</Link></li>
-        <li>
+        <li onClick={toggleMenu}>
           <RxHamburgerMenu />
         </li>
       </ul>
+
+      {isOpen && (
+        <div >
+         "some random texts"
+        </div>
+      )}
     </div>
        <Routes>
           <Route path="/burger" element={<Burger />} />
