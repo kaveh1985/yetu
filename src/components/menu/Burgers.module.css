@@ -1,0 +1,14 @@
+
+  
+  .burgerImages img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Responsive for mobile screens */
+  @media (max-width: 768px) {
+    .imageWrapper {
+      grid-template-columns: 1fr; /* One column on mobile */
+    }
+  }
+  

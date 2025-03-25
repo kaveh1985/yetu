@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Style from "./Options.module.css";
 import { RxHamburgerMenu } from "react-icons/rx";
-import Burger from "../menu/Burgers";
+import Burgers from "../menu/Burgers";
 import Sandwich from '../menu/Sandwich';
 import Pasta from '../menu/Pasta';
 
@@ -12,6 +12,7 @@ export default function Options() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+ 
 
   return (
     <>
@@ -25,17 +26,22 @@ export default function Options() {
         </li>
       </ul>
 
-      {isOpen && (
-        <div >
-         "some random texts"
-        </div>
-      )}
+     
     </div>
-       <Routes>
-          <Route path="/burger" element={<Burger />} />
+    <div  className={Style.container}>
+    <Routes>
+          <Route path="/burger" element={<Burgers />} />
           <Route path="/sandwich" element={<Sandwich />} />
           <Route path="/pasta" element={<Pasta />} />
       </Routes>
+         {isOpen && (
+        <div >
+         "Menu Opended!"
+        </div>
+      )}
+    </div>
+      
     </>
+    
   );
 }
