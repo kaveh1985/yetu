@@ -1,14 +1,21 @@
+.burgerFrame {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr);    
+  gap: 20px;                             
+  height: 400px;
+  margin: 20px;                         
+}
 
-  
-  .burgerImages img {
-    width: 30px;
-    height: 30px;
-  }
-  
-  /* Responsive for mobile screens */
-  @media (max-width: 768px) {
-    .imageWrapper {
-      grid-template-columns: 1fr; /* One column on mobile */
-    }
-  }
-  
+.imageContainer {
+  background-color: #746466; /* Background color */
+  padding: 9px;
+  border-radius: 5px;              /* Creates the 5px gap effect */
+}
+
+.burgerImage {
+  width: 90%;   
+  height: 90%;  
+  object-fit: cover;
+  border-radius: 15px; 
+}

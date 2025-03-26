@@ -1,0 +1,68 @@
+.burgerMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+  }
+  
+  .burgerIcon {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Animation for transforming the burger icon into 'X' */
+  .open .burgerIcon:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .open .burgerIcon:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .open .burgerIcon:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* Side Menu Styles */
+  .sideMenu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Hidden by default */
+    width: 100%;  /* Full width */
+    height: 100vh;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.4s ease-in-out;
+    z-index: 5;
+  }
+  
+  .sideMenu.open {
+    left: 0; /* Slide in */
+  }
+  
+  .sideMenu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .sideMenu li {
+    margin: 20px 0;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .sideMenu li:hover {
+    color: #f0a500; /* Highlight color on hover */
+  }
+  
